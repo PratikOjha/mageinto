@@ -51,12 +51,26 @@
 <button class="hidden sm:flex bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all">
                         Get a Quote
                     </button>
-<button class="lg:hidden text-slate-900 dark:text-slate-100">
+<button id="mobile-menu-btn" class="lg:hidden text-slate-900 dark:text-slate-100">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
 </header>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+  <div id="mobile-menu-overlay" class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute top-0 right-0 h-full w-72 bg-background-light dark:bg-background-dark shadow-2xl flex flex-col pt-20 pb-8 px-8 gap-6">
+    <button id="mobile-menu-close" class="absolute top-5 right-5 text-slate-900 dark:text-slate-100">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a class="text-lg font-bold hover:text-primary transition-colors" href="#services" onclick="closeMobileMenu()">Services</a>
+    <a class="text-lg font-bold hover:text-primary transition-colors" href="#process" onclick="closeMobileMenu()">Process</a>
+    <a class="text-lg font-bold hover:text-primary transition-colors" href="#faq" onclick="closeMobileMenu()">FAQ</a>
+    <a class="text-lg font-bold hover:text-primary transition-colors" href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="#contact" onclick="closeMobileMenu()" class="mt-4 bg-primary text-white text-base font-bold px-6 py-3 rounded-xl text-center hover:shadow-lg transition-all">Get a Quote</a>
+  </div>
+</div>
 <!-- Hero Section -->
 <section class="pt-32 pb-20 px-6 md:px-20 max-w-7xl mx-auto">
 <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -68,7 +82,7 @@
 </span>
                         Innovating the Digital Frontier
                     </div>
-<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
                         Innovating IT &amp; <span class="text-primary">E-commerce</span> Excellence
                     </h1>
 <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
@@ -169,60 +183,62 @@
 </div>
 </section>
 <!-- Process Section -->
-<section class="py-24 px-6 md:px-20 max-w-7xl mx-auto overflow-hidden" id="process">
+<section class="py-24 px-6 md:px-20 max-w-7xl mx-auto" id="process">
 <div class="flex flex-col items-center text-center mb-20 gap-4">
 <h2 class="text-primary font-bold tracking-widest uppercase text-sm">Our Workflow</h2>
 <h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">The Path to Success</h3>
 <div class="w-20 h-1.5 bg-primary rounded-full"></div>
 </div>
-<div class="relative flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between items-start">
-<!-- Timeline Line (Horizontal) -->
-<div class="hidden lg:block absolute top-10 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
+<div class="relative flex flex-col gap-10 lg:gap-0 lg:flex-row justify-between items-start">
+<!-- Timeline Line (Horizontal, desktop only) -->
+<div class="hidden lg:block absolute top-6 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
+<!-- Timeline Line (Vertical, mobile only) -->
+<div class="lg:hidden absolute top-0 left-[23px] w-0.5 h-full bg-primary/20 -z-10"></div>
 <!-- Steps -->
-<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">1</div>
+<div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">1</div>
 <div class="flex flex-col gap-1">
 <h5 class="font-bold text-slate-900 dark:text-white">Requirements</h5>
 <p class="text-xs text-slate-500">In-depth analysis</p>
 </div>
 </div>
-<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">2</div>
+<div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">2</div>
 <div class="flex flex-col gap-1">
 <h5 class="font-bold text-slate-900 dark:text-white">UI/UX Design</h5>
 <p class="text-xs text-slate-500">Visual blueprints</p>
 </div>
 </div>
-<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">3</div>
+<div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">3</div>
 <div class="flex flex-col gap-1">
 <h5 class="font-bold text-slate-900 dark:text-white">System Design</h5>
 <p class="text-xs text-slate-500">Architecture plan</p>
 </div>
 </div>
-<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">4</div>
+<div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">4</div>
 <div class="flex flex-col gap-1">
 <h5 class="font-bold text-slate-900 dark:text-white">Development</h5>
 <p class="text-xs text-slate-500">Core engineering</p>
 </div>
 </div>
-<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">5</div>
+<div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">5</div>
 <div class="flex flex-col gap-1">
 <h5 class="font-bold text-slate-900 dark:text-white">Testing</h5>
 <p class="text-xs text-slate-500">Quality assurance</p>
 </div>
 </div>
-<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">6</div>
+<div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">6</div>
 <div class="flex flex-col gap-1">
 <h5 class="font-bold text-slate-900 dark:text-white">Launch</h5>
 <p class="text-xs text-slate-500">Go live securely</p>
 </div>
 </div>
-<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">7</div>
+<div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">7</div>
 <div class="flex flex-col gap-1">
 <h5 class="font-bold text-slate-900 dark:text-white">SEO</h5>
 <p class="text-xs text-slate-500">Growth &amp; visibility</p>
@@ -239,31 +255,40 @@
 </div>
 <div class="space-y-4">
 <div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
-<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors faq-toggle">
 <span class="font-bold text-slate-900 dark:text-white">How long does a typical Magento development project take?</span>
-<span class="material-symbols-outlined text-primary">expand_more</span>
+<span class="material-symbols-outlined text-primary faq-icon transition-transform">expand_more</span>
 </button>
-<div class="px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+<div class="faq-answer px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                             Timeline varies based on complexity, but a standard enterprise setup typically takes 3-6 months from discovery to launch.
                         </div>
 </div>
 <div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
-<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors faq-toggle">
 <span class="font-bold text-slate-900 dark:text-white">Do you offer post-launch support?</span>
-<span class="material-symbols-outlined text-primary">expand_more</span>
+<span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
 </button>
+<div class="faq-answer hidden px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+    Yes, absolutely. We offer flexible retainer-based support plans covering bug fixes, performance monitoring, security patches, and feature enhancements. Our team remains available post-launch to ensure your platform runs smoothly and scales as your business grows.
+</div>
 </div>
 <div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
-<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors faq-toggle">
 <span class="font-bold text-slate-900 dark:text-white">Can you integrate third-party AI into existing apps?</span>
-<span class="material-symbols-outlined text-primary">expand_more</span>
+<span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
 </button>
+<div class="faq-answer hidden px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+    Definitely. We have extensive experience integrating AI services such as OpenAI, Google Gemini, and custom ML models into existing web and mobile applications. Whether it's a recommendation engine, chatbot, or predictive analytics module, we handle the full integration lifecycle from API design to deployment.
+</div>
 </div>
 <div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
-<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors faq-toggle">
 <span class="font-bold text-slate-900 dark:text-white">How do you ensure the security of my e-commerce store?</span>
-<span class="material-symbols-outlined text-primary">expand_more</span>
+<span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
 </button>
+<div class="faq-answer hidden px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+    Security is built into every layer of our development process. We implement SSL/TLS encryption, PCI-DSS compliance for payment handling, regular vulnerability audits, OWASP best practices, and two-factor authentication where applicable. We also set up automated security scans and provide detailed hardening reports after every project.
+</div>
 </div>
 </div>
 </div>
@@ -284,7 +309,7 @@
 </div>
 <div>
 <h6 class="font-bold">Email Us</h6>
-<p class="text-slate-600 dark:text-slate-400">info.mageinto@gmail.com</p>
+<p class="text-slate-600 dark:text-slate-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="670e090108490a0600020e09130827000a060e0b4904080a">[email&#160;protected]</a></p>
 </div>
 </div>
 <div class="flex items-center gap-4">
@@ -402,10 +427,54 @@
 <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
 <p>© 2024 MageInto Technologies Pvt Ltd. All rights reserved.</p>
 <div class="flex gap-6">
-<a class="hover:text-white" href="#">Terms of Service</a>
-<a class="hover:text-white" href="#">Cookie Policy</a>
+<a class="hover:text-white" href=</div>
 </div>
 </div>
 </footer>
-</div>
-</body></html>
+<script>
+  // Mobile Menu
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+  function openMobileMenu() {
+    mobileMenu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+  mobileMenuBtn && mobileMenuBtn.addEventListener('click', openMobileMenu);
+  mobileMenuClose && mobileMenuClose.addEventListener('click', closeMobileMenu);
+  mobileMenuOverlay && mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+    // Set first one open by default
+    const answer = btn.nextElementSibling;
+    if (answer && answer.classList.contains('faq-answer')) {
+      answer.classList.add('hidden');
+    }
+    btn.addEventListener('click', function() {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      if (!answer || !answer.classList.contains('faq-answer')) return;
+      const isOpen = !answer.classList.contains('hidden');
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.add('hidden'); });
+      document.querySelectorAll('.faq-icon').forEach(function(i) { i.style.transform = ''; });
+      // Open clicked if was closed
+      if (!isOpen) {
+        answer.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Dark mode toggle (if needed)
+  // Theme is set by class on html element; default is light
+</script>
+</body>
+</html>
