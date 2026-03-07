@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f98006",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23190f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-size: 24px; }
+        .service-card:hover .service-icon { transform: scale(1.1); transition: transform 0.3s ease; }
+        .gradient-bg { background: linear-gradient(135deg, #f98006 0%, #d66d05 100%); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="MageInto Technologies Logo" class="h-10 w-auto" data-alt="MageInto Technologies professional corporate logo design" src="MageInto_Logo.png"/>
+<span class="hidden md:block text-xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">MageInto</span>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#process">Process</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#faq">FAQ</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all">
+                        Get a Quote
+                    </button>
+<button class="lg:hidden text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-6 md:px-20 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Innovating the Digital Frontier
+                    </div>
+<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+                        Innovating IT &amp; <span class="text-primary">E-commerce</span> Excellence
+                    </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
+                        MageInto Technologies Pvt Ltd delivers high-end digital solutions for global brands. From Magento enterprise architecture to cutting-edge AI, we build the digital future.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white text-base font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                            Start Your Project <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-primary/20 bg-primary/5 text-primary text-base font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-colors">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/30 rounded-full blur-3xl opacity-50"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-primary/10 aspect-square md:aspect-video lg:aspect-square flex items-center justify-center bg-slate-200 dark:bg-slate-800">
+<img class="w-full h-full object-cover" data-alt="High-tech futuristic server room digital concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx4_jDth2wDrWsA0Hjp-bZI64G5trtl4dJEeN7bTcs2vZls7XIg5sdYd1q3a9TlkdAbNy0lm5kkjYItb3FpioPeH6n97scckhXm7BsAvP7OiIbIB1yvUIr--OttGF6gfrEGWOy9EuhxrK4TKlFuZd0LuyyfYU_CJQoKxKknHjiIR5sPUN6KdSOCCylFXY3ZAmvgljZVyGlVqXrp5l1pc-Ep8GqCL014D59YVXvGgF-fP8-zWMMBxWecoTD_-5FRy_l7t4HR3D___4"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-primary/5 dark:bg-primary/5" id="services">
+<div class="max-w-7xl mx-auto px-6 md:px-20">
+<div class="flex flex-col items-center text-center mb-16 gap-4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Expertise</h2>
+<h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">Premium Tech Solutions</h3>
+<div class="w-20 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">shopping_cart</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Magento 2</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Enterprise-grade e-commerce scaling with optimized performance and security.</p>
+</div>
+<!-- Service 2 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">code</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Laravel</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Robust backend architecture tailored for complex business logic and efficiency.</p>
+</div>
+<!-- Service 3 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">storefront</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Shopify</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Seamless store setups and custom theme development for modern brands.</p>
+</div>
+<!-- Service 4 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">language</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Wordpress</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Custom CMS development providing flexibility and power to your content strategy.</p>
+</div>
+<!-- Service 5 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h4 class="text-xl font-bold mb-3">ReactJS</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Dynamic, lightning-fast frontend user experiences with modern state management.</p>
+</div>
+<!-- Service 6 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Node JS</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Scalable server-side applications designed for real-time data and high traffic.</p>
+</div>
+<!-- Service 7 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">rocket_launch</span>
+</div>
+<h4 class="text-xl font-bold mb-3">E-commerce</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Full-cycle sales funnel optimization to maximize your global reach and ROI.</p>
+</div>
+<!-- Service 8 -->
+<div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
+<div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<h4 class="text-xl font-bold mb-3">AI-Development</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Integrating next-gen intelligent systems to automate and elevate your operations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 px-6 md:px-20 max-w-7xl mx-auto overflow-hidden" id="process">
+<div class="flex flex-col items-center text-center mb-20 gap-4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Our Workflow</h2>
+<h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">The Path to Success</h3>
+<div class="w-20 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="relative flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between items-start">
+<!-- Timeline Line (Horizontal) -->
+<div class="hidden lg:block absolute top-10 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
+<!-- Steps -->
+<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">1</div>
+<div class="flex flex-col gap-1">
+<h5 class="font-bold text-slate-900 dark:text-white">Requirements</h5>
+<p class="text-xs text-slate-500">In-depth analysis</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">2</div>
+<div class="flex flex-col gap-1">
+<h5 class="font-bold text-slate-900 dark:text-white">UI/UX Design</h5>
+<p class="text-xs text-slate-500">Visual blueprints</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">3</div>
+<div class="flex flex-col gap-1">
+<h5 class="font-bold text-slate-900 dark:text-white">System Design</h5>
+<p class="text-xs text-slate-500">Architecture plan</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">4</div>
+<div class="flex flex-col gap-1">
+<h5 class="font-bold text-slate-900 dark:text-white">Development</h5>
+<p class="text-xs text-slate-500">Core engineering</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">5</div>
+<div class="flex flex-col gap-1">
+<h5 class="font-bold text-slate-900 dark:text-white">Testing</h5>
+<p class="text-xs text-slate-500">Quality assurance</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">6</div>
+<div class="flex flex-col gap-1">
+<h5 class="font-bold text-slate-900 dark:text-white">Launch</h5>
+<p class="text-xs text-slate-500">Go live securely</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center lg:w-40 gap-4 group">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">7</div>
+<div class="flex flex-col gap-1">
+<h5 class="font-bold text-slate-900 dark:text-white">SEO</h5>
+<p class="text-xs text-slate-500">Growth &amp; visibility</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-primary/5 dark:bg-primary/5" id="faq">
+<div class="max-w-4xl mx-auto px-6">
+<div class="flex flex-col items-center text-center mb-16 gap-4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">FAQ</h2>
+<h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">Common Questions</h3>
+</div>
+<div class="space-y-4">
+<div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<span class="font-bold text-slate-900 dark:text-white">How long does a typical Magento development project take?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Timeline varies based on complexity, but a standard enterprise setup typically takes 3-6 months from discovery to launch.
+                        </div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<span class="font-bold text-slate-900 dark:text-white">Do you offer post-launch support?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<span class="font-bold text-slate-900 dark:text-white">Can you integrate third-party AI into existing apps?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-primary/5 transition-colors">
+<span class="font-bold text-slate-900 dark:text-white">How do you ensure the security of my e-commerce store?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-6 md:px-20 max-w-7xl mx-auto" id="contact">
+<div class="grid lg:grid-cols-2 gap-16">
+<div>
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Get in Touch</h2>
+<h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8">Let's build something extraordinary together.</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+                        Ready to start your digital transformation? Fill out the form or reach out via our social channels. Our team typically responds within 24 hours.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h6 class="font-bold">Email Us</h6>
+<p class="text-slate-600 dark:text-slate-400">hello@mageinto.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h6 class="font-bold">Call Us</h6>
+<p class="text-slate-600 dark:text-slate-400">+1 (555) 000-TECH</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h6 class="font-bold">Visit Us</h6>
+<p class="text-slate-600 dark:text-slate-400">Technology Hub, Silicon Valley, CA</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-8 md:p-12 rounded-3xl border border-primary/10 shadow-xl">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500">Name</label>
+<input class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500">Email</label>
+<input class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500">Subject</label>
+<input class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Project Inquiry" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-500">Message</label>
+<textarea class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all resize-none" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Placeholder -->
+<section class="w-full h-[400px] relative">
+<div class="absolute inset-0 grayscale contrast-125 dark:invert dark:opacity-40">
+<div class="w-full h-full bg-slate-300 flex items-center justify-center" data-location="San Francisco" style="">
+<img class="w-full h-full object-cover" data-alt="Stylized geographical map background for contact section" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFOTOm11yDVp6cs9Df5luYtF2HZbnWZkRdI8Wn0Y2MIMv02Iefa2T12j5VUT4Qiv-CuuhmNwKgvIzJMkulwe7M6fcb2h1L7Ehp94MIftwTK-LkKwviFyquvmrygM33-mX946q6SOErFVUY5xSDFekjhbcsJRWQC_l2unt1WOeSySeoos4A1fwKIvAYYuakfR6H7jry2ztljBNsfXMZ0M_YG2y80aD3h5zpWzoT5HLFayo15H-ZNaGpOjaZC74zApPtNdy0kZBexxc"/>
+</div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-2xl animate-bounce">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark text-slate-400 py-16 px-6 md:px-20 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<img alt="MageInto Technologies Logo" class="h-8 w-auto brightness-0 invert" data-alt="MageInto Technologies white version logo for dark footer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7X3P7p4i5I0PTDnQGxu3Dnjr1BUR166S5IQdwpxFadluWDeab9d_VrbL5CGK45pVgTk2OV6Q5ii9r_9Rbf0wlFhdCh7Z5Y-j7zu-KlIACvraOco1mQXbsAP0XlcFSJH1WoP-f6oxZCa-WTZD9hO52T6PpteQ-XSKdjczqq9MMVFpF3oz5MmiAxnZOV8VdsmGtIzrNWgB2iOHd1Xsz04IWyKwCryuTB8yHru2B-9RkPU5oEzmRBepPb26W-tcx10_SsG3hDkLiLq8"/>
+<span class="text-xl font-extrabold text-white">MageInto</span>
+</div>
+<p class="text-sm leading-relaxed">
+                        Empowering global commerce with high-end IT engineering and intelligent digital strategies. We turn visions into market-leading realities.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">groups</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Quick Links</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#process">Our Process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Services</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Magento Development</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Custom AI Solutions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shopify Integration</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">UX Strategy</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Newsletter</h6>
+<p class="text-xs mb-4">Stay updated with the latest in tech and e-commerce.</p>
+<div class="flex gap-2">
+<input class="bg-slate-800 border-none rounded-lg p-3 text-sm focus:ring-1 focus:ring-primary outline-none w-full" placeholder="Email" type="email"/>
+<button class="bg-primary text-white p-3 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2024 MageInto Technologies Pvt Ltd. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Terms of Service</a>
+<a class="hover:text-white" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
