@@ -58,10 +58,10 @@
 </div>
 </header>
 <!-- Mobile Menu Drawer -->
-<div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+<div id="mobile-menu" class="fixed inset-0 z-[60] hidden">
   <div id="mobile-menu-overlay" class="absolute inset-0 bg-black/50"></div>
   <div class="absolute top-0 right-0 h-full w-72 bg-background-light dark:bg-background-dark shadow-2xl flex flex-col pt-20 pb-8 px-8 gap-6">
-    <button id="mobile-menu-close" class="absolute top-5 right-5 text-slate-900 dark:text-slate-100">
+    <button id="mobile-menu-close" class="absolute top-5 right-5 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary hover:text-white text-slate-900 dark:text-slate-100 transition-colors">
       <span class="material-symbols-outlined">close</span>
     </button>
     <a class="text-lg font-bold hover:text-primary transition-colors" href="#services" onclick="closeMobileMenu()">Services</a>
