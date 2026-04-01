@@ -9,8 +9,6 @@
 <meta name="author" content="MageInto Technologies Pvt Ltd"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://mageinto.com/"/>
-
-<!-- Open Graph (Facebook, WhatsApp, LinkedIn previews) -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://mageinto.com/"/>
 <meta property="og:title" content="MageInto Technologies — IT & E-commerce Solutions"/>
@@ -18,21 +16,15 @@
 <meta property="og:image" content="https://mageinto.com/MageInto_Logo.png"/>
 <meta property="og:site_name" content="MageInto Technologies"/>
 <meta property="og:locale" content="en_IN"/>
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://mageinto.com/"/>
 <meta name="twitter:title" content="MageInto Technologies — IT & E-commerce Solutions"/>
 <meta name="twitter:description" content="Enterprise Magento 2, Laravel, Shopify, ReactJS & AI development. MageInto Technologies Pvt Ltd, Surat, Gujarat, India."/>
 <meta name="twitter:image" content="https://mageinto.com/MageInto_Logo.png"/>
-
-<!-- Geo tags -->
 <meta name="geo.region" content="IN-GJ"/>
 <meta name="geo.placename" content="Surat, Gujarat, India"/>
 <meta name="geo.position" content="21.1702;72.8311"/>
 <meta name="ICBM" content="21.1702, 72.8311"/>
-
-<!-- Schema.org Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,15 +33,25 @@
   "url": "https://mageinto.com",
   "logo": "https://mageinto.com/MageInto_Logo.png",
   "description": "MageInto Technologies delivers enterprise Magento 2, Laravel, Shopify, ReactJS, Node.js, WordPress and AI development solutions.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Model Town",
-    "addressLocality": "Surat",
-    "addressRegion": "Gujarat",
-    "postalCode": "395010",
-    "addressCountry": "IN"
-  },
-  "telephone": "+918401435681",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Model Town",
+      "addressLocality": "Surat",
+      "addressRegion": "Gujarat",
+      "postalCode": "395010",
+      "addressCountry": "IN"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "1648 Tenley Drive",
+      "addressLocality": "Kingston",
+      "addressRegion": "Ontario",
+      "postalCode": "K7P 0S4",
+      "addressCountry": "CA"
+    }
+  ],
+  "telephone": ["+918401435681", "+16474616250"],
   "email": "info@mageinto.com",
   "sameAs": [
     "https://www.instagram.com/mageinto_technologies/"
@@ -61,41 +63,55 @@
 <link rel="icon" type="image/png" href="MageInto_Logo.png"/>
 <link rel="apple-touch-icon" href="MageInto_Logo.png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f98006",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#23190f",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#f98006",
+          "background-light": "#f8f7f5",
+          "background-dark": "#23190f",
+        },
+        fontFamily: {
+          "display": ["Manrope", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
 <style>
-        body { font-family: 'Manrope', sans-serif; }
-        .material-symbols-outlined { font-size: 24px; }
-        .service-card:hover .service-icon { transform: scale(1.1); transition: transform 0.3s ease; }
-        .gradient-bg { background: linear-gradient(135deg, #f98006 0%, #d66d05 100%); }
-    </style>
+  body { font-family: 'Manrope', sans-serif; }
+  .material-symbols-outlined { font-size: 24px; }
+  .service-card:hover .service-icon { transform: scale(1.1); transition: transform 0.3s ease; }
+  .gradient-bg { background: linear-gradient(135deg, #f98006 0%, #d66d05 100%); }
+
+  /* Office tab styles */
+  .office-tab { transition: all 0.3s ease; }
+  .office-tab.active {
+    background-color: #f98006;
+    color: white;
+    box-shadow: 0 4px 15px rgba(249,128,6,0.3);
+  }
+  .office-tab:not(.active) {
+    background-color: rgba(249,128,6,0.08);
+    color: #f98006;
+  }
+  .map-panel { display: none; }
+  .map-panel.active { display: block; }
+</style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+
 <!-- Navigation -->
 <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
 <div class="max-w-7xl mx-auto flex items-center justify-between">
 <div class="flex items-center gap-3">
-<img alt="MageInto Technologies Logo" class="h-10 w-auto" data-alt="MageInto Technologies professional corporate logo design" src="MageInto_Logo.png"/>
+<img alt="MageInto Technologies Logo" class="h-10 w-auto" src="MageInto_Logo.png"/>
 <span class="hidden md:block text-xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">MageInto</span>
 </div>
 <nav class="hidden lg:flex items-center gap-10">
@@ -105,15 +121,14 @@
 <a class="text-sm font-semibold hover:text-primary transition-colors" href="#contact">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<a class="hidden sm:flex bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all" href="#contact">
-                        Get a Quote
-                    </a>
+<a class="hidden sm:flex bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-primary/30 transition-all" href="#contact">Get a Quote</a>
 <button id="mobile-menu-btn" class="lg:hidden text-slate-900 dark:text-slate-100">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
 </header>
+
 <!-- Mobile Menu Drawer -->
 <div id="mobile-menu" class="fixed inset-0 z-[60] hidden">
   <div id="mobile-menu-overlay" class="absolute inset-0 bg-black/50"></div>
@@ -128,6 +143,7 @@
     <a href="#contact" onclick="closeMobileMenu()" class="mt-4 bg-primary text-white text-base font-bold px-6 py-3 rounded-xl text-center hover:shadow-lg transition-all">Get a Quote</a>
   </div>
 </div>
+
 <!-- Hero Section -->
 <section class="pt-24 pb-12 px-6 md:px-20 max-w-7xl mx-auto">
 <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -137,32 +153,33 @@
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
 </span>
-                        Innovating the Digital Frontier
-                    </div>
+Innovating the Digital Frontier
+</div>
 <h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
-                        Innovating IT &amp; <span class="text-primary">E-commerce</span> Excellence
-                    </h1>
+Innovating IT &amp; <span class="text-primary">E-commerce</span> Excellence
+</h1>
 <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
-                        MageInto Technologies Pvt Ltd delivers high-end digital solutions for global brands. From Magento enterprise architecture to cutting-edge AI, we build the digital future.
-                    </p>
+MageInto Technologies Pvt Ltd delivers high-end digital solutions for global brands. From Magento enterprise architecture to cutting-edge AI, we build the digital future.
+</p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a class="bg-primary text-white text-base font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform flex items-center justify-center gap-2" href="#contact">
-                            Start Your Project <span class="material-symbols-outlined">arrow_forward</span>
+Start Your Project <span class="material-symbols-outlined">arrow_forward</span>
 </a>
 <a href="#portfolio" class="border border-primary/20 bg-primary/5 text-primary text-base font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-colors text-center">
-                            View Portfolio
-                        </a>
+View Portfolio
+</a>
 </div>
 </div>
 <div class="relative">
 <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
 <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/30 rounded-full blur-3xl opacity-50"></div>
 <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-primary/10 aspect-square md:aspect-video lg:aspect-square flex items-center justify-center bg-slate-200 dark:bg-slate-800">
-<img class="w-full h-full object-cover" data-alt="High-tech futuristic server room digital concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx4_jDth2wDrWsA0Hjp-bZI64G5trtl4dJEeN7bTcs2vZls7XIg5sdYd1q3a9TlkdAbNy0lm5kkjYItb3FpioPeH6n97scckhXm7BsAvP7OiIbIB1yvUIr--OttGF6gfrEGWOy9EuhxrK4TKlFuZd0LuyyfYU_CJQoKxKknHjiIR5sPUN6KdSOCCylFXY3ZAmvgljZVyGlVqXrp5l1pc-Ep8GqCL014D59YVXvGgF-fP8-zWMMBxWecoTD_-5FRy_l7t4HR3D___4"/>
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx4_jDth2wDrWsA0Hjp-bZI64G5trtl4dJEeN7bTcs2vZls7XIg5sdYd1q3a9TlkdAbNy0lm5kkjYItb3FpioPeH6n97scckhXm7BsAvP7OiIbIB1yvUIr--OttGF6gfrEGWOy9EuhxrK4TKlFuZd0LuyyfYU_CJQoKxKknHjiIR5sPUN6KdSOCCylFXY3ZAmvgljZVyGlVqXrp5l1pc-Ep8GqCL014D59YVXvGgF-fP8-zWMMBxWecoTD_-5FRy_l7t4HR3D___4"/>
 </div>
 </div>
 </div>
 </section>
+
 <!-- Services Section -->
 <section class="py-12 bg-primary/5 dark:bg-primary/5" id="services">
 <div class="max-w-7xl mx-auto px-6 md:px-20">
@@ -172,7 +189,6 @@
 <div class="w-20 h-1.5 bg-primary rounded-full"></div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Service 1 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">shopping_cart</span>
@@ -180,7 +196,6 @@
 <h4 class="text-xl font-bold mb-3">Adobe Commerce / Magento 2</h4>
 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Enterprise-grade e-commerce scaling with optimized performance and security.</p>
 </div>
-<!-- Service 2 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">code</span>
@@ -188,7 +203,6 @@
 <h4 class="text-xl font-bold mb-3">Laravel</h4>
 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Robust backend architecture tailored for complex business logic and efficiency.</p>
 </div>
-<!-- Service 3 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">storefront</span>
@@ -196,7 +210,6 @@
 <h4 class="text-xl font-bold mb-3">Shopify</h4>
 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Seamless store setups and custom theme development for modern brands.</p>
 </div>
-<!-- Service 4 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">language</span>
@@ -204,7 +217,6 @@
 <h4 class="text-xl font-bold mb-3">Wordpress</h4>
 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Custom CMS development providing flexibility and power to your content strategy.</p>
 </div>
-<!-- Service 5 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">terminal</span>
@@ -212,7 +224,6 @@
 <h4 class="text-xl font-bold mb-3">ReactJS</h4>
 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Dynamic, lightning-fast frontend user experiences with modern state management.</p>
 </div>
-<!-- Service 6 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">hub</span>
@@ -220,7 +231,6 @@
 <h4 class="text-xl font-bold mb-3">Node JS</h4>
 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Scalable server-side applications designed for real-time data and high traffic.</p>
 </div>
-<!-- Service 7 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">rocket_launch</span>
@@ -228,7 +238,6 @@
 <h4 class="text-xl font-bold mb-3">E-commerce</h4>
 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Full-cycle sales funnel optimization to maximize your global reach and ROI.</p>
 </div>
-<!-- Service 8 -->
 <div class="service-card group bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-primary/10 hover:border-primary/40 transition-all shadow-sm">
 <div class="service-icon w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
 <span class="material-symbols-outlined text-3xl">psychology</span>
@@ -239,6 +248,7 @@
 </div>
 </div>
 </section>
+
 <!-- Portfolio Section -->
 <section class="py-12 md:py-24 px-6 md:px-20" id="portfolio">
   <div class="max-w-7xl mx-auto">
@@ -248,12 +258,8 @@
       <div class="w-20 h-1.5 bg-primary rounded-full"></div>
       <p class="text-slate-500 dark:text-slate-400 max-w-xl text-sm leading-relaxed">A glimpse of the digital experiences we've crafted for our clients — blending design, performance, and business impact.</p>
     </div>
-
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <!-- Project 1: Swag Suratt -->
       <div class="group relative bg-background-light dark:bg-background-dark rounded-3xl border border-primary/10 overflow-hidden shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-        <!-- Browser chrome mockup -->
         <div class="bg-slate-100 dark:bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-primary/10">
           <div class="flex gap-1.5">
             <div class="w-3 h-3 rounded-full bg-red-400"></div>
@@ -263,37 +269,25 @@
           <div class="flex-1 mx-3 bg-white dark:bg-slate-700 rounded-md px-3 py-1 text-xs text-slate-400 font-mono truncate">swagsuratt.co.in</div>
           <span class="material-symbols-outlined text-slate-400 text-base">lock</span>
         </div>
-        <!-- Screenshot via Google Thumbnail -->
         <div class="relative overflow-hidden aspect-video bg-slate-200 dark:bg-slate-700">
-          <img
-            src="https://image.thum.io/get/width/800/crop/600/https://swagsuratt.co.in/"
-            alt="Swag Suratt website screenshot"
-            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          />
-          <!-- Fallback if screenshot fails -->
+          <img src="https://image.thum.io/get/width/800/crop/600/https://swagsuratt.co.in/" alt="Swag Suratt website screenshot" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
           <div class="hidden w-full h-full items-center justify-center flex-col gap-3 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-slate-700 dark:to-slate-800">
             <span class="material-symbols-outlined text-primary text-5xl">storefront</span>
             <span class="text-slate-500 text-sm font-semibold">swagsuratt.co.in</span>
           </div>
-          <!-- Hover overlay -->
           <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <a href="https://swagsuratt.co.in/" target="_blank" rel="noopener noreferrer"
-               class="flex items-center gap-2 bg-white text-primary font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform text-sm">
-              <span class="material-symbols-outlined text-base">open_in_new</span>
-              Visit Live Site
+            <a href="https://swagsuratt.co.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-white text-primary font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform text-sm">
+              <span class="material-symbols-outlined text-base">open_in_new</span> Visit Live Site
             </a>
           </div>
         </div>
-        <!-- Card content -->
         <div class="p-6">
           <div class="flex items-start justify-between gap-4 mb-3">
             <div>
               <h4 class="text-xl font-black text-slate-900 dark:text-white">Swag Suratt</h4>
               <p class="text-primary text-xs font-bold uppercase tracking-wider mt-0.5">Fashion &amp; E-commerce</p>
             </div>
-            <a href="https://swagsuratt.co.in/" target="_blank" rel="noopener noreferrer"
-               class="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+            <a href="https://swagsuratt.co.in/" target="_blank" rel="noopener noreferrer" class="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
               <span class="material-symbols-outlined text-base">arrow_outward</span>
             </a>
           </div>
@@ -305,10 +299,7 @@
           </div>
         </div>
       </div>
-
-      <!-- Project 2: Maa Brahmani Properties -->
       <div class="group relative bg-background-light dark:bg-background-dark rounded-3xl border border-primary/10 overflow-hidden shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-        <!-- Browser chrome mockup -->
         <div class="bg-slate-100 dark:bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-primary/10">
           <div class="flex gap-1.5">
             <div class="w-3 h-3 rounded-full bg-red-400"></div>
@@ -318,37 +309,25 @@
           <div class="flex-1 mx-3 bg-white dark:bg-slate-700 rounded-md px-3 py-1 text-xs text-slate-400 font-mono truncate">maabrahmaniproperties.com</div>
           <span class="material-symbols-outlined text-slate-400 text-base">lock</span>
         </div>
-        <!-- Screenshot -->
         <div class="relative overflow-hidden aspect-video bg-slate-200 dark:bg-slate-700">
-          <img
-            src="https://image.thum.io/get/width/800/crop/600/https://www.maabrahmaniproperties.com/"
-            alt="Maa Brahmani Properties website screenshot"
-            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          />
-          <!-- Fallback -->
+          <img src="https://image.thum.io/get/width/800/crop/600/https://www.maabrahmaniproperties.com/" alt="Maa Brahmani Properties website screenshot" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
           <div class="hidden w-full h-full items-center justify-center flex-col gap-3 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-slate-700 dark:to-slate-800">
             <span class="material-symbols-outlined text-primary text-5xl">apartment</span>
             <span class="text-slate-500 text-sm font-semibold">maabrahmaniproperties.com</span>
           </div>
-          <!-- Hover overlay -->
           <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <a href="https://www.maabrahmaniproperties.com/" target="_blank" rel="noopener noreferrer"
-               class="flex items-center gap-2 bg-white text-primary font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform text-sm">
-              <span class="material-symbols-outlined text-base">open_in_new</span>
-              Visit Live Site
+            <a href="https://www.maabrahmaniproperties.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-white text-primary font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform text-sm">
+              <span class="material-symbols-outlined text-base">open_in_new</span> Visit Live Site
             </a>
           </div>
         </div>
-        <!-- Card content -->
         <div class="p-6">
           <div class="flex items-start justify-between gap-4 mb-3">
             <div>
               <h4 class="text-xl font-black text-slate-900 dark:text-white">Maa Brahmani Properties</h4>
               <p class="text-primary text-xs font-bold uppercase tracking-wider mt-0.5">Real Estate</p>
             </div>
-            <a href="https://www.maabrahmaniproperties.com/" target="_blank" rel="noopener noreferrer"
-               class="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+            <a href="https://www.maabrahmaniproperties.com/" target="_blank" rel="noopener noreferrer" class="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
               <span class="material-symbols-outlined text-base">arrow_outward</span>
             </a>
           </div>
@@ -360,10 +339,7 @@
           </div>
         </div>
       </div>
-
     </div>
-
-    <!-- CTA -->
     <div class="mt-12 text-center">
       <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Have a project in mind?</p>
       <a href="#contact" class="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform shadow-lg shadow-primary/20 text-sm">
@@ -372,6 +348,7 @@
     </div>
   </div>
 </section>
+
 <!-- Process Section -->
 <section class="py-12 px-6 md:px-20 max-w-7xl mx-auto" id="process">
 <div class="flex flex-col items-center text-center mb-20 gap-4">
@@ -380,62 +357,39 @@
 <div class="w-20 h-1.5 bg-primary rounded-full"></div>
 </div>
 <div class="relative flex flex-col gap-10 lg:gap-0 lg:flex-row justify-between items-center">
-<!-- Timeline Line (Horizontal, desktop only) -->
 <div class="hidden lg:block absolute top-6 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
-<!-- Timeline Line (Vertical, mobile only) -->
 <div class="lg:hidden absolute top-0 left-[113px] w-0.5 h-full bg-primary/20 -z-10"></div>
-<!-- Steps -->
 <div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
 <div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">1</div>
-<div class="flex flex-col gap-1">
-<h5 class="font-bold text-slate-900 dark:text-white">Requirements</h5>
-<p class="text-xs text-slate-500">In-depth analysis</p>
-</div>
+<div class="flex flex-col gap-1"><h5 class="font-bold text-slate-900 dark:text-white">Requirements</h5><p class="text-xs text-slate-500">In-depth analysis</p></div>
 </div>
 <div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
 <div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">2</div>
-<div class="flex flex-col gap-1">
-<h5 class="font-bold text-slate-900 dark:text-white">UI/UX Design</h5>
-<p class="text-xs text-slate-500">Visual blueprints</p>
-</div>
+<div class="flex flex-col gap-1"><h5 class="font-bold text-slate-900 dark:text-white">UI/UX Design</h5><p class="text-xs text-slate-500">Visual blueprints</p></div>
 </div>
 <div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
 <div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">3</div>
-<div class="flex flex-col gap-1">
-<h5 class="font-bold text-slate-900 dark:text-white">System Design</h5>
-<p class="text-xs text-slate-500">Architecture plan</p>
-</div>
+<div class="flex flex-col gap-1"><h5 class="font-bold text-slate-900 dark:text-white">System Design</h5><p class="text-xs text-slate-500">Architecture plan</p></div>
 </div>
 <div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
 <div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">4</div>
-<div class="flex flex-col gap-1">
-<h5 class="font-bold text-slate-900 dark:text-white">Development</h5>
-<p class="text-xs text-slate-500">Core engineering</p>
-</div>
+<div class="flex flex-col gap-1"><h5 class="font-bold text-slate-900 dark:text-white">Development</h5><p class="text-xs text-slate-500">Core engineering</p></div>
 </div>
 <div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
 <div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">5</div>
-<div class="flex flex-col gap-1">
-<h5 class="font-bold text-slate-900 dark:text-white">Testing</h5>
-<p class="text-xs text-slate-500">Quality assurance</p>
-</div>
+<div class="flex flex-col gap-1"><h5 class="font-bold text-slate-900 dark:text-white">Testing</h5><p class="text-xs text-slate-500">Quality assurance</p></div>
 </div>
 <div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
 <div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">6</div>
-<div class="flex flex-col gap-1">
-<h5 class="font-bold text-slate-900 dark:text-white">Launch</h5>
-<p class="text-xs text-slate-500">Go live securely</p>
-</div>
+<div class="flex flex-col gap-1"><h5 class="font-bold text-slate-900 dark:text-white">Launch</h5><p class="text-xs text-slate-500">Go live securely</p></div>
 </div>
 <div class="flex flex-row lg:flex-col items-center lg:justify-center text-left lg:text-center lg:w-40 gap-4 group">
 <div class="w-12 h-12 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl relative z-10 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">7</div>
-<div class="flex flex-col gap-1">
-<h5 class="font-bold text-slate-900 dark:text-white">SEO</h5>
-<p class="text-xs text-slate-500">Growth &amp; visibility</p>
-</div>
+<div class="flex flex-col gap-1"><h5 class="font-bold text-slate-900 dark:text-white">SEO</h5><p class="text-xs text-slate-500">Growth &amp; visibility</p></div>
 </div>
 </div>
 </section>
+
 <!-- FAQ Section -->
 <section class="py-12 bg-primary/5 dark:bg-primary/5" id="faq">
 <div class="max-w-4xl mx-auto px-6">
@@ -450,8 +404,8 @@
 <span class="material-symbols-outlined text-primary faq-icon transition-transform">expand_more</span>
 </button>
 <div class="faq-answer px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Timeline varies based on complexity, but a standard enterprise setup typically takes 3-6 months from discovery to launch.
-                        </div>
+Timeline varies based on complexity, but a standard enterprise setup typically takes 3-6 months from discovery to launch.
+</div>
 </div>
 <div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
 <button class="w-full flex items-center justify-between p-6 text-left transition-colors faq-toggle">
@@ -459,7 +413,7 @@
 <span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
 </button>
 <div class="faq-answer hidden px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-    Yes, absolutely. We offer flexible retainer-based support plans covering bug fixes, performance monitoring, security patches, and feature enhancements. Our team remains available post-launch to ensure your platform runs smoothly and scales as your business grows.
+Yes, absolutely. We offer flexible retainer-based support plans covering bug fixes, performance monitoring, security patches, and feature enhancements. Our team remains available post-launch to ensure your platform runs smoothly and scales as your business grows.
 </div>
 </div>
 <div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
@@ -468,7 +422,7 @@
 <span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
 </button>
 <div class="faq-answer hidden px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-    Definitely. We have extensive experience integrating AI services such as OpenAI, Google Gemini, and custom ML models into existing web and mobile applications. Whether it's a recommendation engine, chatbot, or predictive analytics module, we handle the full integration lifecycle from API design to deployment.
+Definitely. We have extensive experience integrating AI services such as OpenAI, Google Gemini, and custom ML models into existing web and mobile applications. Whether it's a recommendation engine, chatbot, or predictive analytics module, we handle the full integration lifecycle from API design to deployment.
 </div>
 </div>
 <div class="bg-background-light dark:bg-background-dark border border-primary/10 rounded-xl overflow-hidden shadow-sm">
@@ -477,128 +431,190 @@
 <span class="material-symbols-outlined text-primary faq-icon">expand_more</span>
 </button>
 <div class="faq-answer hidden px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-    Security is built into every layer of our development process. We implement SSL/TLS encryption, PCI-DSS compliance for payment handling, regular vulnerability audits, OWASP best practices, and two-factor authentication where applicable. We also set up automated security scans and provide detailed hardening reports after every project.
+Security is built into every layer of our development process. We implement SSL/TLS encryption, PCI-DSS compliance for payment handling, regular vulnerability audits, OWASP best practices, and two-factor authentication where applicable. We also set up automated security scans and provide detailed hardening reports after every project.
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Contact Section -->
+
+<!-- ===================== UPDATED CONTACT SECTION ===================== -->
 <section class="py-12 px-6 md:px-20 max-w-7xl mx-auto" id="contact">
-<div class="grid lg:grid-cols-2 gap-16">
-<div>
-<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Get in Touch</h2>
-<h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8">Let's build something extraordinary together.</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
-                        Ready to start your digital transformation? Fill out the form or reach out via our social channels. Our team typically responds within 24 hours.
-                    </p>
-<div class="space-y-6">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<h6 class="font-bold">Email Us</h6>
-<p class="text-slate-600 dark:text-slate-400">info.mageinto@gmail.com</p>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">call</span>
-</div>
-<div>
-<h6 class="font-bold">Call Us</h6>
-<p class="text-slate-600 dark:text-slate-400">+91 84014 35681</p>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<div>
-<h6 class="font-bold">Visit Us</h6>
-<p class="text-slate-600 dark:text-slate-400">Model Town, Surat, Gujarat, India. 395010</p>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-background-light dark:bg-background-dark p-8 md:p-12 rounded-3xl border border-primary/10 shadow-xl">
-<!-- Success Message (hidden by default) -->
-<div id="form-success" class="hidden flex flex-col items-center justify-center gap-4 py-16 text-center">
-  <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-    <span class="material-symbols-outlined text-green-500 text-4xl">check_circle</span>
-  </div>
-  <h4 class="text-xl font-black text-slate-900 dark:text-white">Message Sent!</h4>
-  <p class="text-slate-500 text-sm">Thanks for reaching out. We'll get back to you within 24 hours.</p>
-  <button onclick="resetContactForm()" class="mt-2 text-primary font-bold text-sm hover:underline">Send another message</button>
-</div>
+  <div class="grid lg:grid-cols-2 gap-16">
 
-<!-- Error Message (hidden by default) -->
-<div id="form-error" class="hidden mb-4 flex items-center gap-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 rounded-xl px-4 py-3 text-sm font-semibold">
-  <span class="material-symbols-outlined text-base">error</span>
-  Something went wrong. Please try again or email us directly.
-</div>
+    <!-- Left: Contact Info with Two Offices -->
+    <div>
+      <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Get in Touch</h2>
+      <h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8">Let's build something extraordinary together.</h3>
+      <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+        Ready to start your digital transformation? Fill out the form or reach out via our social channels. Our team typically responds within 24 hours.
+      </p>
 
-<form id="contact-form" class="space-y-6">
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="flex flex-col gap-2">
-      <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-name">Name</label>
-      <input id="contact-name" name="name" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text"/>
-    </div>
-    <div class="flex flex-col gap-2">
-      <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-email">Email</label>
-      <input id="contact-email" name="email" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
-    </div>
-  </div>
-  <div class="flex flex-col gap-2">
-    <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-subject">Subject</label>
-    <input id="contact-subject" name="subject" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Project Inquiry" type="text"/>
-  </div>
-  <div class="flex flex-col gap-2">
-    <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-message">Message</label>
-    <textarea id="contact-message" name="message" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all resize-none" placeholder="How can we help you?" rows="4"></textarea>
-  </div>
-  <button id="form-submit-btn" type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
-    <span id="btn-text">Send Message</span>
-    <span id="btn-spinner" class="hidden animate-spin material-symbols-outlined text-base">progress_activity</span>
-  </button>
-</form>
-</div>
-</div>
-</section>
-<!-- Map Section -->
-<section class="w-full h-[400px] relative">
-  <iframe
-    src="https://www.openstreetmap.org/export/embed.html?bbox=72.7%2C21.0%2C72.9%2C21.3&layer=mapnik&marker=21.1702%2C72.8311"
-    class="w-full h-full border-0"
-    allowfullscreen
-    loading="lazy"
-    title="MageInto Technologies - Surat, Gujarat, India"
-  ></iframe>
-  <!-- Location pin overlay -->
-  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none">
-    <div class="bg-background-light dark:bg-background-dark border border-primary/20 shadow-xl rounded-xl px-5 py-3 flex items-center gap-3">
-      <div class="w-9 h-9 bg-primary rounded-full flex items-center justify-center text-white shrink-0 animate-bounce">
-        <span class="material-symbols-outlined text-sm">location_on</span>
+      <!-- Email - shared -->
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined">mail</span>
+        </div>
+        <div>
+          <h6 class="font-bold">Email Us</h6>
+          <p class="text-slate-600 dark:text-slate-400">info.mageinto@gmail.com</p>
+        </div>
       </div>
-      <div>
-        <p class="text-xs font-black text-slate-900 dark:text-white leading-tight">MageInto Technologies</p>
-        <p class="text-xs text-slate-500 leading-tight">Model Town, Surat, Gujarat 395010</p>
+
+      <!-- Office Cards -->
+      <div class="flex flex-col gap-4">
+
+        <!-- India Office -->
+        <div class="flex gap-4 p-5 rounded-2xl border border-primary/15 bg-primary/5 dark:bg-primary/5 hover:border-primary/30 transition-all">
+          <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-md shadow-primary/30">
+            <span class="material-symbols-outlined text-lg">location_on</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇮🇳</span>
+              <h6 class="font-black text-slate-900 dark:text-white text-sm uppercase tracking-wide">India Office</h6>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">Model Town, Surat, Gujarat, India — 395010</p>
+            <a href="tel:+918401435681" class="inline-flex items-center gap-1.5 text-primary font-bold text-sm mt-1 hover:underline">
+              <span class="material-symbols-outlined text-base">call</span>
+              +91 84014 35681
+            </a>
+          </div>
+        </div>
+
+        <!-- Canada Office -->
+        <div class="flex gap-4 p-5 rounded-2xl border border-primary/15 bg-primary/5 dark:bg-primary/5 hover:border-primary/30 transition-all">
+          <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-md shadow-primary/30">
+            <span class="material-symbols-outlined text-lg">location_on</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇨🇦</span>
+              <h6 class="font-black text-slate-900 dark:text-white text-sm uppercase tracking-wide">Canada Office</h6>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">1648 Tenley Drive, Kingston, Ontario, Canada — K7P 0S4</p>
+            <a href="tel:+16474616250" class="inline-flex items-center gap-1.5 text-primary font-bold text-sm mt-1 hover:underline">
+              <span class="material-symbols-outlined text-base">call</span>
+              +1 647 461 6250
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <!-- Right: Contact Form -->
+    <div class="bg-background-light dark:bg-background-dark p-8 md:p-12 rounded-3xl border border-primary/10 shadow-xl">
+      <div id="form-success" class="hidden flex flex-col items-center justify-center gap-4 py-16 text-center">
+        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+          <span class="material-symbols-outlined text-green-500 text-4xl">check_circle</span>
+        </div>
+        <h4 class="text-xl font-black text-slate-900 dark:text-white">Message Sent!</h4>
+        <p class="text-slate-500 text-sm">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+        <button onclick="resetContactForm()" class="mt-2 text-primary font-bold text-sm hover:underline">Send another message</button>
+      </div>
+      <div id="form-error" class="hidden mb-4 flex items-center gap-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 rounded-xl px-4 py-3 text-sm font-semibold">
+        <span class="material-symbols-outlined text-base">error</span>
+        Something went wrong. Please try again or email us directly.
+      </div>
+      <form id="contact-form" class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-2">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-name">Name</label>
+            <input id="contact-name" name="name" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-email">Email</label>
+            <input id="contact-email" name="email" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-subject">Subject</label>
+          <input id="contact-subject" name="subject" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Project Inquiry" type="text"/>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-xs font-bold uppercase tracking-wider text-slate-500" for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required class="bg-primary/5 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary outline-none transition-all resize-none" placeholder="How can we help you?" rows="4"></textarea>
+        </div>
+        <button id="form-submit-btn" type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+          <span id="btn-text">Send Message</span>
+          <span id="btn-spinner" class="hidden animate-spin material-symbols-outlined text-base">progress_activity</span>
+        </button>
+      </form>
+    </div>
   </div>
 </section>
+
+<!-- ===================== UPDATED MAP SECTION ===================== -->
+<section class="w-full relative" id="offices-map">
+
+  <!-- Tab switcher -->
+  <div class="flex items-center justify-center gap-3 py-6 px-6 bg-background-light dark:bg-background-dark border-t border-primary/10">
+    <button id="tab-india" onclick="switchMap('india')" class="office-tab active flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all">
+      <span>🇮🇳</span> Surat, India
+    </button>
+    <button id="tab-canada" onclick="switchMap('canada')" class="office-tab flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all">
+      <span>🇨🇦</span> Kingston, Canada
+    </button>
+  </div>
+
+  <!-- Map: India -->
+  <div id="map-india" class="map-panel active w-full h-[420px] relative">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=72.7%2C21.0%2C72.9%2C21.3&layer=mapnik&marker=21.1702%2C72.8311"
+      class="w-full h-full border-0"
+      allowfullscreen
+      loading="lazy"
+      title="MageInto Technologies - Surat, Gujarat, India"
+    ></iframe>
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none">
+      <div class="bg-background-light dark:bg-background-dark border border-primary/20 shadow-xl rounded-xl px-5 py-3 flex items-center gap-3 whitespace-nowrap">
+        <div class="w-9 h-9 bg-primary rounded-full flex items-center justify-center text-white shrink-0 animate-bounce">
+          <span class="material-symbols-outlined text-sm">location_on</span>
+        </div>
+        <div>
+          <p class="text-xs font-black text-slate-900 dark:text-white leading-tight">🇮🇳 MageInto Technologies — India</p>
+          <p class="text-xs text-slate-500 leading-tight">Model Town, Surat, Gujarat 395010</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map: Canada -->
+  <div id="map-canada" class="map-panel w-full h-[420px] relative">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-76.65%2C44.19%2C-76.45%2C44.30&layer=mapnik&marker=44.2500%2C-76.5500"
+      class="w-full h-full border-0"
+      allowfullscreen
+      loading="lazy"
+      title="MageInto Technologies - Kingston, Ontario, Canada"
+    ></iframe>
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none">
+      <div class="bg-background-light dark:bg-background-dark border border-primary/20 shadow-xl rounded-xl px-5 py-3 flex items-center gap-3 whitespace-nowrap">
+        <div class="w-9 h-9 bg-primary rounded-full flex items-center justify-center text-white shrink-0 animate-bounce">
+          <span class="material-symbols-outlined text-sm">location_on</span>
+        </div>
+        <div>
+          <p class="text-xs font-black text-slate-900 dark:text-white leading-tight">🇨🇦 MageInto Technologies — Canada</p>
+          <p class="text-xs text-slate-500 leading-tight">1648 Tenley Drive, Kingston, Ontario K7P 0S4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <!-- Footer -->
 <footer class="bg-background-dark text-slate-400 py-10 px-6 md:px-20 border-t border-slate-800">
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 <div class="flex flex-col gap-6">
 <div class="flex items-center gap-3">
-<img alt="MageInto Technologies Logo" class="h-8 w-auto invert" data-alt="MageInto Technologies white version logo for dark footer" src="MageInto_Logo.png"/>
+<img alt="MageInto Technologies Logo" class="h-8 w-auto invert" src="MageInto_Logo.png"/>
 <span class="text-xl font-extrabold text-white">MageInto</span>
 </div>
 <p class="text-sm leading-relaxed">
-                        Empowering global commerce with high-end IT engineering and intelligent digital strategies. We turn visions into market-leading realities.
-                    </p>
+Empowering global commerce with high-end IT engineering and intelligent digital strategies. We turn visions into market-leading realities.
+</p>
 </div>
 <div>
 <h6 class="text-white font-bold mb-6">Quick Links</h6>
@@ -618,14 +634,25 @@
 <li>UX Strategy</li>
 </ul>
 </div>
+<div>
+<h6 class="text-white font-bold mb-6">Our Offices</h6>
+<ul class="space-y-4 text-sm">
+<li class="flex items-start gap-2">
+  <span class="mt-0.5">🇮🇳</span>
+  <span>Model Town, Surat, Gujarat, India 395010</span>
+</li>
+<li class="flex items-start gap-2">
+  <span class="mt-0.5">🇨🇦</span>
+  <span>1648 Tenley Drive, Kingston, Ontario, Canada K7P 0S4</span>
+</li>
+</ul>
+</div>
 </div>
 <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
 <p>© 2026 MageInto Technologies Pvt Ltd. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-white" href=</div>
-</div>
 </div>
 </footer>
+
 <script>
   // Mobile Menu
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -633,41 +660,39 @@
   const mobileMenuClose = document.getElementById('mobile-menu-close');
   const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
-  function openMobileMenu() {
-    mobileMenu.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeMobileMenu() {
-    mobileMenu.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
+  function openMobileMenu() { mobileMenu.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+  function closeMobileMenu() { mobileMenu.classList.add('hidden'); document.body.style.overflow = ''; }
   mobileMenuBtn && mobileMenuBtn.addEventListener('click', openMobileMenu);
   mobileMenuClose && mobileMenuClose.addEventListener('click', closeMobileMenu);
   mobileMenuOverlay && mobileMenuOverlay.addEventListener('click', closeMobileMenu);
 
   // FAQ Accordion
   document.querySelectorAll('.faq-toggle').forEach(function(btn) {
-    // Set first one open by default
     const answer = btn.nextElementSibling;
-    if (answer && answer.classList.contains('faq-answer')) {
-      answer.classList.add('hidden');
-    }
+    if (answer && answer.classList.contains('faq-answer')) { answer.classList.add('hidden'); }
     btn.addEventListener('click', function() {
       const answer = btn.nextElementSibling;
       const icon = btn.querySelector('.faq-icon');
       if (!answer || !answer.classList.contains('faq-answer')) return;
       const isOpen = !answer.classList.contains('hidden');
-      // Close all
       document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.add('hidden'); });
       document.querySelectorAll('.faq-icon').forEach(function(i) { i.style.transform = ''; });
-      // Open clicked if was closed
-      if (!isOpen) {
-        answer.classList.remove('hidden');
-        if (icon) icon.style.transform = 'rotate(180deg)';
-      }
+      if (!isOpen) { answer.classList.remove('hidden'); if (icon) icon.style.transform = 'rotate(180deg)'; }
     });
   });
-        
+
+  // Map Office Switcher
+  function switchMap(office) {
+    // Panels
+    document.getElementById('map-india').classList.remove('active');
+    document.getElementById('map-canada').classList.remove('active');
+    document.getElementById('map-' + office).classList.add('active');
+    // Tabs
+    document.getElementById('tab-india').classList.remove('active');
+    document.getElementById('tab-canada').classList.remove('active');
+    document.getElementById('tab-' + office).classList.add('active');
+  }
+
   // Contact Form - Formspree
   const contactForm = document.getElementById('contact-form');
   const formSuccess = document.getElementById('form-success');
@@ -685,38 +710,19 @@
   contactForm && contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     formError.classList.add('hidden');
-
-    // Show loading state
     submitBtn.disabled = true;
     btnText.textContent = 'Sending…';
     btnSpinner.classList.remove('hidden');
-
     const data = new FormData(contactForm);
-
     try {
       const response = await fetch('https://formspree.io/f/xzdjrbvo', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        method: 'POST', body: data, headers: { 'Accept': 'application/json' }
       });
-
-      if (response.ok) {
-        contactForm.classList.add('hidden');
-        formSuccess.classList.remove('hidden');
-      } else {
-        formError.classList.remove('hidden');
-      }
-    } catch (err) {
-      formError.classList.remove('hidden');
-    } finally {
-      submitBtn.disabled = false;
-      btnText.textContent = 'Send Message';
-      btnSpinner.classList.add('hidden');
-    }
+      if (response.ok) { contactForm.classList.add('hidden'); formSuccess.classList.remove('hidden'); }
+      else { formError.classList.remove('hidden'); }
+    } catch (err) { formError.classList.remove('hidden'); }
+    finally { submitBtn.disabled = false; btnText.textContent = 'Send Message'; btnSpinner.classList.add('hidden'); }
   });
-
-  // Dark mode toggle (if needed)
-  // Theme is set by class on html element; default is light
 </script>
 </body>
 </html>
